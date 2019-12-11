@@ -21,6 +21,9 @@ class Deck:
 		#return information on how many cards are in the deck
 		return 'Deck of {} cards'.format(self.count())
 
+	def __iter__(self):
+		return iter(self.cards)
+
 	def count(self):
 		#eturns a count of how many cards remain in the deck
 		return len(self.cards)
@@ -54,12 +57,14 @@ class Deck:
 		return self
 
 d = Deck()
-# print(d.cards)
+# # print(d.cards)
 d.shuffle()
+# # print(d.cards)
+# card = d.deal_card()
+# print(card)
+# hand = d.deal_hand(50)
+# print(hand)
 # print(d.cards)
-card = d.deal_card()
-print(card)
-hand = d.deal_hand(50)
-print(hand)
-print(d.cards)
 
+for card in d:
+	print(card)
