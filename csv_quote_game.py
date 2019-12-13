@@ -18,7 +18,7 @@ def start_game(quotes):
 	guess = ''
 	print('Here is a quote:')
 	print(quote['text'])
-	print(quote['author'])
+	# print(quote['author'])
 
 	while guess.lower() != quote['author'].lower() and remaining_guesses > 0:
 		guess = input(f'Who said this quote? Guesses remaining: {remaining_guesses}\n')
